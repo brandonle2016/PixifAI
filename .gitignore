@@ -1,0 +1,17 @@
+# python cache
+__pycache__/
+*.py[cod]
+
+# virtual environments
+.venv/
+
+# flask files
+.env
+.cache
+
+# system files
+.DS_Store
+Thumbs.db
+
+# logs
+*.log

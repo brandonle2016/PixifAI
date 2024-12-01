@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="result">
+    <div class="result-container recently-played">
+        <h1>Your recently played</h1>
+        <div class="tracks-header">
+            <span class="track-title">Track</span>
+            <span class="track-artist">Artist(s)</span>
+            <span class="track-time">Time</span>
+        </div>
+        <div class="recently-played-tracks">
+            <ul>
+                {% for track in tracks %}
+                <li>
+                    <span class="track-title">{{ track.split('\t')[0] }}</span>
+                    <span class="track-artist">{{ track.split('\t')[1] }}</span>
+                    <span class="track-time">{{ track.split('\t')[2] }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

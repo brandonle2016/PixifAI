@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="result">
+    <div class="result-container top-artists">
+        <h1>Your top artists</h1>
+        <div class="grid-container">
+            {% for artist in artists %}
+            <div class="grid-item">
+                <img class="artist-image" src="{{ artist.split('\t')[1] }}" alt="Artist Image">
+                <span class="artist-index-name">{{ artist.split('\t')[0] }} {{ artist.split('\t')[2] }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

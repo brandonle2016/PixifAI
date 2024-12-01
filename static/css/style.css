@@ -1,0 +1,236 @@
+/* Global Styles */
+:root {
+    --primary-font: "Poppins", sans-serif;
+    --primary-color: #252c53;
+    --secondary-color: #ffffff;
+    --accent-color: #1c2241;
+    --background-gradient: radial-gradient(100% 80% at 50% 80%, rgb(193, 210, 251) 0%, #e6e5f6 65%, #f7f9fc 100%);
+    --padding-horizontal: 148px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+}
+
+body {
+    background-color: #f7f9fc;
+}
+
+/* Navigation Bar */
+nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 8rem;
+    background-color: #f7f9fc;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 0 20px;
+    letter-spacing: 0.2px;
+    display: flex;
+    line-height: 60px;
+}
+
+.navbar .sign {
+    margin-left: auto;
+}
+
+.navbar .sign button {
+    padding: 0rem 1rem; 
+    color: #000;
+    background: #fff;
+    height: 32px;
+    border: solid 1px gray; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+button {
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    border: none;
+    color: var(--secondary-color);
+    background: var(--primary-color);
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+}
+
+button:hover {
+    background: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    background: var(--background-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.hero-container {
+    margin-top: -100px;
+    padding: 0 var(--padding-horizontal);
+    text-align: center;
+}
+
+.hero-heading {
+    font-size: 3.5rem;
+    line-height: 1.3;
+    color: transparent;
+    background-image: linear-gradient(#ba43ff, #6b43ff, #4379FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.hero-container h2 {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: rgb(87, 87, 92);
+    margin-top: 0rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-buttons ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.result-container {
+    padding: 1rem var(--padding-horizontal);
+    background-color: #f7f9fc;
+}
+
+.result-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #4379FF;
+}
+
+/* Tracks List */
+.tracks ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.track-index {
+    width: 30px;
+    text-align: center;
+}
+
+.track-image {
+    width: 50px;
+    height: 50px;
+    margin: 0 1rem;
+}
+
+.track-title {
+    flex: 3;
+    text-align: left;
+}
+
+.track-artist {
+    flex: 2;
+    text-align: left;
+}
+
+/* Recently Played */
+.recently-played .tracks-header,
+.recently-played-tracks ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recently-played .tracks-header {
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.recently-played-tracks ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.recently-played-tracks ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.track-time {
+    flex: 1;
+    text-align: left;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artist-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+}
+
+.artist-index-name {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+.image-section img {
+    max-width: 40%; /* Ensure the image doesn't exceed the container's width */
+    height: auto;    /* Maintain the aspect ratio */
+}
+
+.prompt-section h3 {
+    text-align: center;
+    color: #4379FF;
+}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="result">
+    <div class="result-container tracks">
+        <h1>Your top tracks</h1>
+            <ul>
+                {% for track in tracks %}
+                <li class="track-item">
+                    <span class="track-index">{{ track.split('\t')[0] }}</span>
+                    <img class="track-image" src="{{ track.split('\t')[1] }}" alt="Album Cover">
+                    <span class="track-title">{{ track.split('\t')[2] }}</span>
+                    <span class="track-artist">{{ track.split('\t')[3] }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+    </div>
+</section>
+{% endblock %}

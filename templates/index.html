@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="hero">
+    <div class="hero-container">
+        <h1 class="hero-heading">
+            Watch your favorite<br>
+            <span class="second-line">songs paint the picture</span>
+        </h1>
+        <h2>Your music, your masterpiece crafted by AI</h2>
+        <div class="hero-buttons">
+            <ul>
+                <li><a href="{{ url_for('display_image') }}"><button>See your sound ></button></a></li>
+                <li></li><a href="{{ url_for('display_recommended_songs') }}"><button>Hear what's next ></button></a><li></li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

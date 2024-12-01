@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+        <title>PixifAI</title>
+        <link href="../static/css/style.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"/>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('index') }}"><strong>PixifAI</strong></a></li>
+                <li><a href="{{ url_for('display_top_tracks') }}"><strong>Top tracks</strong></a></li>
+                <li><a href="{{ url_for('display_top_artists') }}"><strong>Top artists</strong></a></li>
+                <li><a href="{{ url_for('display_recently_played') }}"><strong>Recently played</strong></a></li>
+                <li class="sign">
+                    {% if session.get("spotify_token") %}
+                        <a href="{{ url_for('sign_out') }}">Sign out</a>
+                    {% else %}
+                        <a href="{{ url_for('sign_in') }}"><button>Sign in ></button></a>
+                    {% endif %}
+                 </li>
+            </ul>
+        </nav>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <script src="{{ url_for('static', filename='js/loading-spinner.js') }}"></script>
+    </body>
+</html>
