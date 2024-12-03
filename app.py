@@ -19,8 +19,6 @@ from datetime import datetime
 from tzlocal import get_localzone
 import json
 
-load_dotenv()
-
 # Load environment variables from .env file
 load_dotenv()
 
